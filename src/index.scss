@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 48px;
+
+    .radio-group {
+        display: flex;
+        gap: 24px;
+    }
+
+    .radio-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+
+        input,
+        label {
+            cursor: pointer;
+        }
+
+        input[type="radio" i] {
+            margin: 0;
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .tips {
+        color: #909aaa;
+        font-size: 12px;
+        margin-bottom: 24px;
+    }
+}
