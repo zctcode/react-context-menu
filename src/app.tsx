@@ -128,7 +128,48 @@ function App() {
                     label: 'Download',
                     icon: <IconDownload />
                 }
-            ]
+            ],
+            disableditem: [
+                {
+                    key: 'copy',
+                    label: 'Copy',
+                    icon: <IconCopy />
+                },
+                {
+                    key: 'refresh',
+                    label: 'Refresh',
+                    icon: <IconRefresh />
+                },
+                [{
+                    key: 'delete',
+                    label: 'Delete',
+                    icon: <IconDelete />,
+                    disabled: true,
+                },
+                {
+                    key: 'share',
+                    label: 'Share',
+                    icon: <IconShare />,
+                    children: [
+                        {
+                            key: 'facebook',
+                            label: 'Facebook',
+                            icon: <IconFacebook />
+                        },
+                        {
+                            key: 'twitter',
+                            label: 'Twitter',
+                            icon: <IconTwitter />,
+                            disabled: true,
+                        }
+                    ]
+                }],
+                {
+                    key: 'download',
+                    label: 'Download',
+                    icon: <IconDownload />,
+                }
+            ],
         };
     }, []);
 
@@ -151,6 +192,10 @@ function App() {
                 <div className="radio-wrapper">
                     <input value="submenu" type="radio" id="radio4" name="radio" checked={type === 'submenu'} onChange={e => setType(e.target.value)} />
                     <label htmlFor="radio4">Sub Menu</label>
+                </div>
+                <div className="radio-wrapper">
+                    <input value="disableditem" type="radio" id="radio5" name="radio" checked={type === 'disableditem'} onChange={e => setType(e.target.value)} />
+                    <label htmlFor="radio5">Menu item disabled</label>
                 </div>
             </div>
             <ContextMenu
