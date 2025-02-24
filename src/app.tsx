@@ -6,7 +6,7 @@ import './index.scss';
 
 function App() {
     const [contextMenu] = ContextMenu.useContextMenu();
-    const [type, setType] = useState('basic');
+    const [type, setType] = useState('simple');
 
     const handleMenuClick = (key: string | number) => {
         alert(key);
@@ -14,7 +14,7 @@ function App() {
 
     const itemsMap: { [key: string]: (ContextMenuItemProps | ContextMenuItemProps[])[] } = useMemo(() => {
         return {
-            basic: [
+            simple: [
                 {
                     key: 'copy',
                     label: 'Copy'
@@ -178,8 +178,8 @@ function App() {
             <div className="tips">Select the menu type and right-click to open the menu.</div>
             <div className="radio-group">
                 <div className="radio-wrapper">
-                    <input value="basic" type="radio" id="radio1" name="radio" checked={type === 'basic'} onChange={e => setType(e.target.value)} />
-                    <label htmlFor="radio1">Basic</label>
+                    <input value="simple" type="radio" id="radio1" name="radio" checked={type === 'simple'} onChange={e => setType(e.target.value)} />
+                    <label htmlFor="radio1">Simple</label>
                 </div>
                 <div className="radio-wrapper">
                     <input value="menuicon" type="radio" id="radio2" name="radio" checked={type === 'menuicon'} onChange={e => setType(e.target.value)} />
