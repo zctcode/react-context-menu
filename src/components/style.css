@@ -48,6 +48,11 @@
     border-top: none;
 }
 
+.ihc-context-menu-group:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
 .ihc-context-menu-group:last-child {
     padding-bottom: 0;
     border-bottom: none;
