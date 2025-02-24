@@ -59,7 +59,6 @@ Online demo: [https://q5fknh.csb.app/](https://q5fknh.csb.app/)
 |className|string|Y|
 |zIndex|number|Y|
 |contextMenu|object|N|
-|destroyOnClose|boolean|Y|
 |items|any|N|
 |onClick|(key: string) => void|Y|
 

@@ -27,7 +27,6 @@ export interface ContextMenuProps {
     className?: string;
     items: (ContextMenuItemProps | ContextMenuItemProps[])[];
     contextMenu: ContextMenuState & { onClose: () => void };
-    destroyOnClose?: boolean;
     onClick?: (key: string | number) => void;
 }
 
@@ -37,12 +36,9 @@ type ContextMenuComponent = React.FC<ContextMenuProps> & {
 
 const ContextMenu: ContextMenuComponent = (props) => {
     const containerRef = React.useRef<HTMLDivElement>(null);
-    const [visible, setVisible] = React.useState<boolean>(false);
     const [position, setPosition] = React.useState({ top: 0, left: 0 });
 
     React.useEffect(() => {
-        setVisible(props.contextMenu.visible);
-        if (!props.contextMenu.visible) return;
         const containerWidth = containerRef.current?.offsetWidth || 0;
         const containerHeight = containerRef.current?.offsetHeight || 0;
         const positionY = props.contextMenu?.position.y === undefined ? -9999 : props.contextMenu?.position.y;
@@ -124,13 +120,11 @@ const ContextMenu: ContextMenuComponent = (props) => {
         ...position
     };
 
-    if (!visible && props.destroyOnClose) return null;
-
     return ReactDOM.createPortal(
         <div
             ref={containerRef}
             style={style}
-            className={cn("ihc-context-menu", { "ihc-visible": visible }, props.className)}
+            className={cn("ihc-context-menu", { "ihc-visible": props.contextMenu.visible }, props.className)}
             onClick={eventPreprocess}
             onContextMenu={eventPreprocess}>
             {renderItems(props.items)}
