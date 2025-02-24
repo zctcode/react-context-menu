@@ -83,8 +83,9 @@ function copyFiles(sourceDir, targetDir) {
       ...pkg,
       scripts: {},
       dependencies: {
-        "react": pkg.dependencies.react,
-        "classnames": pkg.dependencies.classnames,
+        "react": pkg.dependencies["react"],
+        "react-dom": pkg.dependencies["react-dom"],
+        "classnames": pkg.dependencies["classnames"],
       },
       devDependencies: {}
     };

@@ -47,6 +47,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
+## 示例
+在线预览: [https://q5fknh.csb.app/](https://q5fknh.csb.app/)
+
+[![Edit react-splitter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/q5fknh)
+
 ## 属性
 ##### ContextMenu Props
 |属性|类型|是否必须|描述|

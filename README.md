@@ -47,6 +47,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
+## Demo
+Online demo: [https://q5fknh.csb.app/](https://q5fknh.csb.app/)
+
+[![Edit react-splitter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/q5fknh)
+
 ## Props
 ##### ContextMenu Props
 |Property|Type|Optional
