@@ -88,9 +88,9 @@ const ContextMenu: ContextMenuComponent = (props) => {
         return items.map((item) => {
             if (Array.isArray(item)) {
                 const key = item.map((i) => i.key).join("-");
-                return (
+                return item.length > 0 ? (
                     <div className="ihc-context-menu-group" key={key}>{renderItems(item, hasIcon)}</div>
-                );
+                ) : null;
             }
 
             const subItems = item.children || [];
