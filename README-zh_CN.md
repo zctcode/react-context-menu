@@ -59,7 +59,6 @@ export default App;
 |className|string|否|自定义类样式|
 |zIndex|number|否||
 |contextMenu|object|是|菜单实例|
-|destroyOnClose|boolean|否|是否关闭时销毁|
 |items|any|是|菜单项|
 |onClick|(key: string) => void|否|菜单项点击事件|
 

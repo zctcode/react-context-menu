@@ -9,11 +9,11 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     user-select: none;
-    display: none;
+    visibility: hidden;
 }
 
 .ihc-context-menu.ihc-visible {
-    display: block;
+    visibility: visible;
 }
 
 .ihc-context-menu-item {
@@ -30,7 +30,7 @@
 }
 
 .ihc-context-menu-item:not(.ihc-item-disabled):hover>.ihc-sub-context-menu {
-    display: block;
+    visibility: visible;
 }
 
 .ihc-context-menu-item.ihc-item-disabled {
